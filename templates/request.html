@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/form.css')}}">
+    <style>
+        #company{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #company:hover{
+            color: white
+        }
+    </style>
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    
+    <div class="main">
+        <div class="content">
+            <h1>Мигом подключим интернет!</h1>
+            <form action="" method="post">
+                <div class="field">
+                    <label for="fio">ФИО:</label>
+                    <input type="text" id="fio" name="fio">
+                </div> 
+                <div class="field">
+                    <label for="adress">Адрес:</label>
+                    <input type="text" id="adress" name="adress">
+                </div>
+                <div class="field">
+                    <label for="phone">Номер телефона:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="field">
+                    <label for="type">Вид заявки:</label>
+                    <select name="type" id="type">
+                        <option disabled selected value> -- Выберите вид -- </option>
+                        <option value="В квартиру">В квартиру</option>
+                        <option value="В дом">В дом</option>
+                        <option value="В офис">В офис</option>
+                    </select>
+                    
+                </div>
+                <div class="field">
+                    <label for="tariff">Тариф:</label>
+                    <select name="tariff" id="tariff">
+                        <option disabled selected value> -- Выберите тариф -- </option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="additional">Доп. информация:</label>
+                    <input type="text" id="additional" name="additional">
+                </div>
+
+                <div class="button">
+                    <input type="submit" id="submit" name="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+    <script src="{{url_for('static', filename='script/dropdown.js')}}"> </script>
+
+</body>
+</html>

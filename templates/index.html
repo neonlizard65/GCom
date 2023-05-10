@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДжиКом - интернет провайдер</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    <div class="container">    
+        <div class="cover">
+            <img src="{{url_for('static', filename='res/cover.png')}}" alt="Обложка">
+        </div>
+    
+        <div class="cover-content">
+            <div class="pros">
+                <div class="pro">
+                    <div class="pro_icon">
+                        <img src="{{url_for('static', filename='res/discount.svg')}}" alt="Выгодные тарифы">
+                    </div>
+                    <div class="pro_text">
+                        Выгодные тарифы
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="pro_icon">
+                        <img src="{{url_for('static', filename='res/internet-speed-icon.svg')}}" alt="Быстрый интернет">
+                    </div>  
+                    <div class="pro_text">
+                        Быстрый интернет
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="pro_icon">
+                        <img src="{{url_for('static', filename='res/delivery-truck-icon.svg')}}" alt="Мгновенное подключение">
+                    </div>
+                    <div class="pro_text">
+                        Мгновенное подключение
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="pro_icon">
+                        <img src="{{url_for('static', filename='res/software-license-icon.svg')}}" alt="Имеем все необходимые лицензии и сертификаты">
+                    </div>
+                    <div class="pro_text">
+                        Имеем все необходимые лицензии и сертификаты
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <a href="">Подать заявку</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="additional">
+        <div class="about">
+            <h1>О компании</h1>
+            <p>Компания - оператор связи является одним из лидеров на рынке услуг связи в своем сегменте. Большой опыт и дружная команда позволяют нам оказывать услуги самого высокого качества свои.</p>
+            <p>Почти каждый клиент, который обратился к нам, остался доволен и продолжает пользоваться нашими услугами. Мы знаем и всегда подскажем что необходимо клиенту, поэтому всегда попадаем в цель.</p>
+        </div>
+        <div class="about_image">
+            <img src="{{url_for('static', filename='res/business.png')}}" alt="">
+        </div>
+    </div>
+
+    <div class="map">
+        <h1>Мы на карте!</h1>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A027bac08d621bfc6b183a532989668f65e53126e6e6c1a41101ae2120e25e8d5&amp;width=100%25&amp;height=602&amp;lang=ru_RU&amp;scroll=false"></script>
+    </div>
+
+    {% include "common/footer.html" %}
+
+</body>
+</html>

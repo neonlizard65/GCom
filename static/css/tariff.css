@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 63vh;
+}
+
+.side-panel{
+    margin: 0px 40px 0px 10px;
+}
+
+body{
+    margin: 0px;
+}
+
+th{
+    font-size: 1.2em;
+}
+
+table{
+    border: 1px solid rgb(225, 225, 225);
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid rgb(225, 225, 225);
+    padding: 8px 18px;
+    min-width: 7vw;
+ 
+}
+
+tbody td:first-child{
+    background-color: rgb(245, 245, 245);
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

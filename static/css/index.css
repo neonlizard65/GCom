@@ -1,0 +1,110 @@
+
+body{
+    margin: 0px;
+}
+
+.pro_icon img{
+    width: 8vh;
+    height: 8vh;
+}
+
+.cover{
+    position: relative;
+    width: 100%;
+    
+}
+
+.cover img{
+    position: relative;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+}
+
+.cover-content{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pros{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.pro_icon{
+    margin: 0px 20px;
+}
+
+.pro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 45vw;
+    height: 8vh;
+    margin: 1vh;
+    padding: 2vh;
+    transition: .5s;
+}
+
+
+.pro:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.2);
+}
+
+.button a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, rgba(83,37,116,1) 00%, rgba(9,9,121,1) 50%, rgba(0,11,153,1) 100%);
+    border-radius: 60px;
+    padding: 20px 40px;
+    min-width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    justify-self: center;
+    margin: 20px;
+    transition: .5s;
+}
+
+.button a:hover{
+    transform: scale(1.1);
+}
+
+.additional{
+    position: relative;
+    margin: 50px 0px 0px 0px;
+}
+
+.about p{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about_image img{
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лицензии</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/side.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/licenses.css')}}">
+    <style>
+        #licenses{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #licenses: hover{
+            color: white
+        }
+    </style>
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    <div class="main">
+        <div class="side-panel">
+            {% include "common/side_about.html"%}
+        </div>
+
+        <div class="content">
+            <ul class="licenses">
+                <li>
+                    <img src="{{url_for('static', filename='res/licenses/license1.jpg')}}" alt="На услуги кабельного вещания">
+                    <h4>На услуги кабельного вещания</h4>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='res/licenses/license2.jpg')}}" alt="На услуги кабельного вещания">
+                    <h4>На услуги местной телефонной связи</h4>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='res/licenses/license3.jpg')}}" alt="На услуги кабельного вещания">
+                    <h4>На предоставление каналов связи</h4>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='res/licenses/license4.jpg')}}" alt="На услуги кабельного вещания">
+                    <h4>На оказание услуг связи по передачи данных</h4>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='res/licenses/license5.jpg')}}" alt="На услуги кабельного вещания">
+                    <h4>На оказание телематических услуг связи</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+</body>
+</html>

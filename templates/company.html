@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/side.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/company.css')}}">
+    <style>
+        #company{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #company: hover{
+            color: white
+        }
+    </style>
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    <div class="main">
+        <div class="side-panel">
+            {% include "common/side_about.html"%}
+        </div>
+
+        <div class="content">
+            <h1>Об операторе связи "Джи Ком"</h1>
+            <p>Компания - оператор связи является одним из лидеров на рынке услуг связи в своем сегменте. Большой опыт и дружная команда позволяют нам оказывать услуги самого высокого качества свои.</p>
+            <p>Почти каждый клиент, который обратился к нам, остался доволен и продолжает пользоваться нашими услугами. Мы знаем и всегда подскажем что необходимо клиенту, поэтому всегда попадаем в цель.</p>
+        
+            <h1>Почему выбирают нас?</h1>
+            <p>Наша команда уже более 10 лет оказывает услуги связи в городском округе Балашиха. Мы всегда рядом с Вами и готовы выехать к Вам в любое время!</p>
+            <ul>
+                <li>Имеем все необходимые лицензии и сертификаты</li>
+                <li>Индивидуальный подход к каждому</li>
+                <li>Низкие цены на все наши услуги</li>
+                <li>Большой опыт работы</li>
+            </ul>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+
+</body>
+</html>

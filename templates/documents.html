@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/side.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/documents.css')}}">
+    <style>
+        #documents{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #documents:hover{
+            color: white
+        }
+    </style>
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    <div class="main">
+        <div class="side-panel">
+            {% include "common/side_about.html"%}
+        </div>
+
+        <div class="content">
+            <ul class="doclist">
+                {% for doc in docs %}
+                <li>
+                    {% if doc.split('.')[1] == "pdf" %}
+                        <img src="{{url_for('static', filename='res/pdf.png')}}" alt="pdf">
+                    {% elif doc.split('.')[1] == "jpg" %}
+                        <img src="{{url_for('static', filename='res/jpg.png')}}" alt="jpg">
+                    {% endif %}
+                    <a href="{{url_for('static', filename='res/documents/'+doc)}}">{{doc}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+</body>
+</html>

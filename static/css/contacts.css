@@ -1,0 +1,23 @@
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.side-panel{
+    margin: 0px 40px 0px 10px;
+}
+
+body{
+    margin: 0px;
+}
+
+.content{
+    width: 100%;
+}
+
+.map{
+    width: 100%;
+}

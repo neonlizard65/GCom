@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В офис</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/side.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/tariff.css')}}">
+    <style>
+        #to_office{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #to_office: hover{
+            color: white
+        }
+    </style>
+</head>
+<body>
+    {% include "common/menu.html" %}
+    <div class="main">
+        <div class="side-panel">
+            {% include "common/side_tariffs.html"%}
+        </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>Скорость (мбит/с)</th>
+                        <th>Стоимость</th>
+                        <th>Видеонаблюдение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tariff in tariffs %}
+                    <tr>
+                        <td>{{tariff.name}}</td>
+                        <td>{{tariff.speed}}</td>
+                        <td>{{tariff.price}}</td>
+                        {% if tariff.video %}
+                            <td>✓</td>
+                        {% else %}
+                            <td></td>
+                        {% endif %}
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+</body>
+</html>
