@@ -18,6 +18,8 @@
             color: white
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='res/logo.png')}}">
+
 </head>
 <body>
     {% include "common/menu.html" %}
@@ -26,7 +28,7 @@
     <div class="main">
         <div class="content">
             <h1>Войти в личный кабинет</h1>
-            <form action="" method="post">
+            <form action="/authorize" method="post">
                 <div class="field">
                     <label for="login">Логин:</label>
                     <input type="text" id="login" name="login">

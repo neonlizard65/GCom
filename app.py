@@ -1,9 +1,13 @@
 from flask import Flask, render_template, Request, Response, request, redirect, jsonify
+from datetime import datetime
 from flask_migrate import Migrate
+import models
 from models import Dogovor, Manager, Request, Tariff, User
 from connection import db
 from os import listdir
 from os.path import isfile, join
+import string
+import random
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://aleksei:123@localhost/gcom"
@@ -80,3 +84,28 @@ def cabinet():
 @app.route("/get/tariffs")
 def get_tariffs():
     return jsonify(db.session.query(Tariff).all())
+
+@app.route("/handle_request", methods = ["POST"])
+def handle_request():
+    if request.method == "POST":
+        fio = request.form["fio"]
+        adress = request.form["adress"]
+        phone = request.form["phone"]
+        tariffid = request.form["tariff"]
+        additional = request.form["additional"]
+        new_client = models.User(name=fio, password=generate_password(), address = adress, number = phone, balance = 0)
+        db.session.add(new_client)
+        db.session.commit()
+        new_request = models.Request(clientid = new_client.id, tariffid = tariffid, date = datetime.now(), additional = additional)
+        db.session.add(new_request)
+        db.session.commit()
+        return redirect("handled")
+    return Response("Ошибка на стороне сервера", status=500)
+def generate_password():
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for i in range(10))
+    return result_str
+
+@app.route("/handled")
+def handled():
+    return render_template("handled.html")

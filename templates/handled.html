@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+    {% include "common/font.html"%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/side.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/company.css')}}">
+    <style>
+        #company{
+            background-color: rgba(0,11,153,1);
+            color: white
+        }
+        #company: hover{
+            color: white
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='res/logo.png')}}">
+</head>
+<body>
+    {% include "common/menu.html" %}
+
+    <div class="main">
+        <div class="content" style="margin:10px">
+            <h1>Ваша заявка принята! Ждите звонок от наших сотрудников</h1>
+            <a href="/">Вернуться на главную</a>
+        </div>
+    </div>
+    {% include "common/footer.html" %}
+
+</body>
+</html>

@@ -18,6 +18,8 @@
             color: white
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='res/logo.png')}}">
+
 </head>
 <body>
     {% include "common/menu.html" %}
@@ -26,22 +28,22 @@
     <div class="main">
         <div class="content">
             <h1>Мигом подключим интернет!</h1>
-            <form action="" method="post">
+            <form action="/handle_request" method="post">
                 <div class="field">
                     <label for="fio">ФИО:</label>
-                    <input type="text" id="fio" name="fio">
+                    <input type="text" id="fio" name="fio" required>
                 </div> 
                 <div class="field">
                     <label for="adress">Адрес:</label>
-                    <input type="text" id="adress" name="adress">
+                    <input type="text" id="adress" name="adress" required>
                 </div>
                 <div class="field">
                     <label for="phone">Номер телефона:</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="field">
                     <label for="type">Вид заявки:</label>
-                    <select name="type" id="type">
+                    <select name="type" id="type" required>
                         <option disabled selected value> -- Выберите вид -- </option>
                         <option value="В квартиру">В квартиру</option>
                         <option value="В дом">В дом</option>
@@ -51,13 +53,13 @@
                 </div>
                 <div class="field">
                     <label for="tariff">Тариф:</label>
-                    <select name="tariff" id="tariff">
+                    <select name="tariff" id="tariff" required>
                         <option disabled selected value> -- Выберите тариф -- </option>
                     </select>
                 </div>
                 <div class="field">
-                    <label for="additional">Доп. информация:</label>
-                    <input type="text" id="additional" name="additional">
+                    <label for="additional" style="vertical-align: top; position: relative; top: 4px;">Доп. информация:</label>
+                    <textarea id="additional" name="additional"></textarea>
                 </div>
 
                 <div class="button">

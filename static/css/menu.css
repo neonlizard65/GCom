@@ -16,8 +16,17 @@
 
 .logo-wrapper img{
     width: 100px;
-    height: 100px;
+    height: 100px;    
 }
+
+.logo-wrapper{
+    transition: 0.4s;
+}
+
+.logo-wrapper:hover{
+    transform: scale(1.2);
+}
+
 
 .icon img{
     width: 30px;
@@ -135,6 +144,21 @@
     left: 0px;
     padding-left: 0px;
     box-shadow: 1px 2px 4px 2px black;
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;
+    transition: 0.4s;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
 }
 
 .sub-menu li a{

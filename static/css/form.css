@@ -25,7 +25,7 @@ form{
     align-items: center;
 }
 
-form select, form input{
+form select, form input, textarea{
     width: 14vw;
     padding: 8px 16px;
     -ms-box-sizing:content-box;
@@ -33,7 +33,9 @@ form select, form input{
     -webkit-box-sizing:content-box; 
     box-sizing:content-box;
     margin-bottom: 10px;
+
 }
+
 
 .button{
     align-self: center;
@@ -45,3 +47,21 @@ h1{
     text-align: center;
 }
 
+
+input[type="submit"]{
+    display: block;
+    color: white;
+    background: linear-gradient(90deg, rgba(83,37,116,1) 00%, rgba(9,9,121,1) 50%, rgba(0,11,153,1) 100%);
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 10vw;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    transition: .5s;
+    align-items: center;
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+}
