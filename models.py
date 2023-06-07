@@ -27,9 +27,9 @@ class User(db.Model):
     
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String, nullable=False)
-    password = db.Column(db.String)
-    address = db.Column(db.String)
-    number = db.Column(db.String)
+    password = db.Column(db.String, nullable=False)
+    address = db.Column(db.String, nullable=False)
+    number = db.Column(db.String, nullable=False)
     balance = db.Column(db.Float)
     
     
@@ -79,6 +79,6 @@ class Request(db.Model):
     clientid = db.Column(db.Integer, db.ForeignKey("User.id", ondelete="CASCADE"), nullable=False)
     tariffid = db.Column(db.Integer, db.ForeignKey("Tariff.id", ondelete="CASCADE"), nullable=False)
     managerid = db.Column(db.Integer, db.ForeignKey("Manager.id", ondelete="CASCADE"))
-    date = db.Column(db.DateTime)
+    date = db.Column(db.DateTime, nullable=False)
     handled = db.Column(db.Boolean)
     additional = db.Column(db.String)
